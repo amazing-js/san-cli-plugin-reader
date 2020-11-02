@@ -32,7 +32,7 @@ module.exports = api => {
         defaultHeight: 4,
         openDetailsButton: true,
         defaultConfig: () => ({
-            url: 'https://ecomfe.github.io/atom.xml'
+            url: 'https://www.zhihu.com/column/c_1184770014971883520'
         }),
         async onConfigOpen() {
             return {

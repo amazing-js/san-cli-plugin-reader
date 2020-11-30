@@ -1,6 +1,6 @@
 /**
- * @file gen-qrcode 生成二维码组件
- * @author zttonly
+ * @file 阅读器组件
+ * @author Lohoyo <824591872@qq.com>
  */
 
 import './reader.less';

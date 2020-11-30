@@ -1,6 +1,6 @@
 {
   "name": "san-cli-ui-widget-reader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "san cli ui widget reader",
   "scripts": {
     "start": "cross-env NODE_ENV=development san serve --config san.config.js",
@@ -12,7 +12,7 @@
     "San CLI UI",
     "CLI UI WIDGET"
   ],
-  "author": "liuhuyue <liuhuyue@baidu.com>",
+  "author": "Lohoyo <824591872@qq.com>",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^7.0.2",

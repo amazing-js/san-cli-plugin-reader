@@ -1,5 +1,5 @@
 /**
- * @file san config
+ * @file 插件配置
  * @author Lohoyo <824591872@qq.com>
  *
  */

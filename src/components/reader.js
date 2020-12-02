@@ -42,6 +42,7 @@ export default {
             </fragment>
         </div>
     `,
+
     computed: {
         isImg() {
             const selectedItem = this.data.get('selectedItem');
@@ -49,12 +50,14 @@ export default {
                 && selectedItem.enclosure
                 && selectedItem.enclosure.type.indexOf('image/') === 0;
         },
+
         isAudio() {
             const selectedItem = this.data.get('selectedItem');
             return selectedItem
                 && selectedItem.enclosure
                 && selectedItem.enclosure.type.indexOf('audio/') === 0;
         },
+
         isVideo() {
             const selectedItem = this.data.get('selectedItem');
             return selectedItem
@@ -62,11 +65,13 @@ export default {
                 && selectedItem.enclosure.type.indexOf('video/') === 0;
         }
     },
+
     filters: {
         dateFormat(d) {
             return new Date(d).toLocaleString();
         }
     },
+
     initData() {
         return {
             loading: false,
@@ -80,9 +85,11 @@ export default {
             }
         };
     },
+
     created() {
         this.addAction();
     },
+
     attached() {
         const url = this.data.get('data.config.url');
         if (url) {
@@ -102,6 +109,7 @@ export default {
             !value && this.addAction();
         });
     },
+
     addAction() {
         this.dispatch('Widget:addHeaderAction', {
             id: 'reload',
@@ -111,6 +119,7 @@ export default {
             tooltip: this.$t('san-cli-ui-widget-reader.actionTooltip.reload')
         });
     },
+
     async fetchFeed(force = false) {
         this.data.set('selectedItem', null);
 
@@ -153,9 +162,11 @@ export default {
         }
         this.data.set('loading', false);
     },
+
     handleClick(value) {
         this.data.set('selectedItem', value);
     },
+
     imgSrcReplace(item) {
         let match = item.link.match(/^http(s)?:\/\/(.*?)\//);
         let domain = match ? match[0] : '';

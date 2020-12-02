@@ -1,6 +1,6 @@
 {
   "name": "san-cli-ui-widget-reader",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "san cli ui widget reader",
   "scripts": {
     "start": "cross-env NODE_ENV=development san serve --config san.config.js",

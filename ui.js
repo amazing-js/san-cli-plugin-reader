@@ -54,7 +54,13 @@ module.exports = api => {
     api.onAction('san-cli-ui-widget-reader.actions.fetch-news', async params => {
         if (!parser) {
             const Parser = require('rss-parser');
-            parser = new Parser();
+            parser = new Parser({
+                headers: {
+                    // 以下两个请求头参数用于避免订阅知乎专栏时的人机验证
+                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36',
+                    "cookie": '__cfduid=d0546c8e79d64b5830dc24559264809cc1611663676; cf_chl_1=85ad4ac3065c374; cf_chl_prog=a17; cf_clearance=38ffa64db1e6530637e74c15889d25c7b697377e-1611664131-0-250'
+                }
+            });
         }
 
         if (!params.force) {
